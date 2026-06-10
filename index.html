@@ -6,17 +6,19 @@
   <title>泡泡爪宠物洗护</title>
   <style>
     :root {
-      --ink: #17212b;
-      --muted: #5d6b76;
-      --line: #dce7e8;
-      --paper: #fbfcf8;
-      --foam: #e8f7f2;
-      --mint: #79c7b4;
-      --teal: #0f766e;
-      --coral: #ef7c67;
-      --sun: #f5bd55;
+      --ink: #15252f;
+      --muted: #667684;
+      --line: #d8e5e2;
+      --paper: #f8fbf7;
+      --foam: #e5f3ed;
+      --mint: #8bd3be;
+      --teal: #08756d;
+      --teal-dark: #064c49;
+      --coral: #e86f58;
+      --sun: #f4b74a;
+      --cream: #fff8ed;
       --white: #ffffff;
-      --shadow: 0 18px 50px rgba(23, 33, 43, 0.12);
+      --shadow: 0 18px 50px rgba(21, 37, 47, 0.12);
     }
 
     * {
@@ -27,7 +29,8 @@
       margin: 0;
       font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
       color: var(--ink);
-      background: var(--paper);
+      background:
+        linear-gradient(180deg, #fbfdf9 0%, var(--paper) 38%, #f5faf6 100%);
       letter-spacing: 0;
     }
 
@@ -56,8 +59,8 @@
       justify-content: space-between;
       gap: 18px;
       padding: 18px clamp(18px, 4vw, 56px);
-      background: rgba(251, 252, 248, 0.86);
-      border-bottom: 1px solid rgba(220, 231, 232, 0.72);
+      background: rgba(248, 251, 247, 0.9);
+      border-bottom: 1px solid rgba(216, 229, 226, 0.78);
       backdrop-filter: blur(14px);
     }
 
@@ -76,8 +79,8 @@
       height: 38px;
       border-radius: 50%;
       color: var(--white);
-      background: var(--teal);
-      box-shadow: 0 10px 24px rgba(15, 118, 110, 0.24);
+      background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+      box-shadow: 0 10px 24px rgba(8, 117, 109, 0.24);
     }
 
     .links {
@@ -106,20 +109,21 @@
     .nav-cta {
       padding: 0 18px;
       color: var(--white);
-      background: var(--coral);
+      background: linear-gradient(135deg, var(--coral), #f19a64);
+      box-shadow: 0 12px 24px rgba(232, 111, 88, 0.2);
     }
 
     .primary {
       padding: 0 24px;
       color: var(--white);
-      background: var(--teal);
-      box-shadow: 0 14px 28px rgba(15, 118, 110, 0.22);
+      background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+      box-shadow: 0 14px 28px rgba(8, 117, 109, 0.22);
     }
 
     .secondary {
       padding: 0 22px;
       color: var(--teal);
-      background: var(--white);
+      background: rgba(255, 255, 255, 0.88);
       border: 1px solid var(--line);
     }
 
@@ -143,7 +147,9 @@
       position: absolute;
       inset: 0;
       z-index: 1;
-      background: linear-gradient(90deg, rgba(251, 252, 248, 0.96) 0%, rgba(251, 252, 248, 0.82) 38%, rgba(251, 252, 248, 0.2) 74%);
+      background:
+        linear-gradient(90deg, rgba(248, 251, 247, 0.96) 0%, rgba(248, 251, 247, 0.82) 42%, rgba(248, 251, 247, 0.18) 76%),
+        linear-gradient(180deg, rgba(255, 248, 237, 0.48) 0%, rgba(229, 243, 237, 0.2) 100%);
       pointer-events: none;
     }
 
@@ -213,7 +219,7 @@
       border: 1px solid rgba(15, 118, 110, 0.18);
       border-radius: 999px;
       color: var(--teal);
-      background: rgba(232, 247, 242, 0.86);
+      background: rgba(229, 243, 237, 0.9);
       font-size: 14px;
       font-weight: 700;
     }
@@ -249,9 +255,9 @@
 
     .stat {
       padding: 16px;
-      border: 1px solid rgba(220, 231, 232, 0.85);
+      border: 1px solid rgba(216, 229, 226, 0.9);
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.74);
+      background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(10px);
     }
 
@@ -307,8 +313,8 @@
     .price-card {
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: var(--white);
-      box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 12px 34px rgba(21, 37, 47, 0.06);
     }
 
     .service {
@@ -323,7 +329,7 @@
       height: 48px;
       margin-bottom: 24px;
       border-radius: 50%;
-      background: var(--foam);
+      background: linear-gradient(180deg, #e9f6ef 0%, #f7fbf7 100%);
       color: var(--teal);
       font-size: 25px;
     }
@@ -358,10 +364,10 @@
       border-radius: 8px;
       overflow: hidden;
       background:
-        radial-gradient(circle at 20% 24%, rgba(255, 255, 255, 0.9) 0 42px, transparent 44px),
-        radial-gradient(circle at 72% 18%, rgba(255, 255, 255, 0.78) 0 28px, transparent 30px),
-        radial-gradient(circle at 82% 68%, rgba(255, 255, 255, 0.72) 0 54px, transparent 56px),
-        linear-gradient(135deg, #d4f0eb, #fff7ec);
+        radial-gradient(circle at 20% 24%, rgba(255, 255, 255, 0.88) 0 42px, transparent 44px),
+        radial-gradient(circle at 72% 18%, rgba(255, 255, 255, 0.76) 0 28px, transparent 30px),
+        radial-gradient(circle at 82% 68%, rgba(255, 255, 255, 0.7) 0 54px, transparent 56px),
+        linear-gradient(135deg, #ccece5, var(--cream));
       box-shadow: var(--shadow);
     }
 
@@ -374,7 +380,7 @@
       transform: translateX(-50%);
       border-radius: 24px 24px 70px 70px;
       background: var(--white);
-      border: 8px solid #b7ded7;
+      border: 8px solid #a8d8cf;
     }
 
     .pet-head {
@@ -441,7 +447,7 @@
       height: 48px;
       border-radius: 50%;
       color: var(--white);
-      background: var(--teal);
+      background: linear-gradient(135deg, var(--teal), var(--teal-dark));
       font-weight: 800;
     }
 
@@ -500,8 +506,8 @@
     }
 
     .featured {
-      border-color: rgba(239, 124, 103, 0.42);
-      box-shadow: 0 20px 52px rgba(239, 124, 103, 0.16);
+      border-color: rgba(232, 111, 88, 0.42);
+      box-shadow: 0 20px 52px rgba(232, 111, 88, 0.16);
     }
 
     .booking {
@@ -511,7 +517,9 @@
       align-items: center;
       padding: clamp(28px, 5vw, 52px);
       border-radius: 8px;
-      background: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(6, 76, 73, 0.96), rgba(21, 37, 47, 0.98)),
+        var(--ink);
       color: var(--white);
     }
 
@@ -541,10 +549,10 @@
       width: 100%;
       min-height: 48px;
       padding: 0 14px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.22);
       border-radius: 8px;
       color: var(--white);
-      background: rgba(255, 255, 255, 0.09);
+      background: rgba(255, 255, 255, 0.11);
       outline: none;
     }
 
@@ -558,7 +566,7 @@
 
     .form .primary {
       width: 100%;
-      background: var(--coral);
+      background: linear-gradient(135deg, var(--coral), #f19a64);
       box-shadow: none;
     }
 
@@ -582,7 +590,9 @@
       }
 
       .hero::after {
-        background: linear-gradient(180deg, rgba(251, 252, 248, 0.98) 0%, rgba(251, 252, 248, 0.9) 43%, rgba(251, 252, 248, 0.24) 100%);
+        background:
+          linear-gradient(180deg, rgba(248, 251, 247, 0.98) 0%, rgba(248, 251, 247, 0.9) 45%, rgba(248, 251, 247, 0.24) 100%),
+          linear-gradient(180deg, rgba(255, 248, 237, 0.4), rgba(229, 243, 237, 0.18));
       }
 
       .hero-slide {
